@@ -1,6 +1,8 @@
 # Taiji Encode
 太极编码器
 
+[![NPM version][npm-image]][npm-url]
+
 ## 使用 Taiji Encode
 ```sh
 npm install taiji-encode
@@ -21,3 +23,6 @@ console.log(taijiDecode('䷘䷵䷸䷖䷘䷮䷯䷌䷘䷮䷜䷿䷘䷔䷅䷗䷉䷉�
 
 ## TODO
 * 支持自定义字符排序规则，用于简单混淆
+
+[npm-image]: https://img.shields.io/npm/v/taiji-encode.svg?style=flat-square
+[npm-url]: https://www.npmjs.com/package/taiji-encode
