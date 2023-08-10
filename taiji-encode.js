@@ -15,7 +15,7 @@ const base64Chs = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz012345678
  * @returns 编码后的太极字符串
  */
 export function taijiEncode(str) {
-  let base64 = encode(str)
+  const base64 = encode(str)
   let taiji = base64
 
   for (let i = 0; i < 65; i++) {
@@ -37,7 +37,7 @@ export function taijiDecode(taiji) {
     base64 = base64.replaceAll(guaChs[i], base64Chs[i])
   }
 
-  let data = decode(base64)
+  const data = decode(base64)
 
   return data
 }

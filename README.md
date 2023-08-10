@@ -6,20 +6,17 @@
 npm install taiji-encode
 ```
 
-## 使用示例
 ```javascript
 import { taijiEncode, taijiDecode } from 'taiji-encode'
 
 console.log(taijiEncode('Hello Taiji Encode!'))
+// 输出: ䷜䷭䷾䷷䷹䷭䷠䷖䷾䷭䷣䷔䷮䷑䷳䷖䷂䷯䷘䷨䷹䷸䷂䷕䷏䷇☯☯
 console.log(taijiDecode('䷜䷭䷾䷷䷹䷭䷠䷖䷾䷭䷣䷔䷮䷑䷳䷖䷂䷯䷘䷨䷹䷸䷂䷕䷏䷇☯☯'))
+// 输出: Hello Taiji Encode!
 console.log(taijiEncode('你好太极！'))
+// 输出: ䷘䷵䷸䷖䷘䷮䷯䷌䷘䷮䷜䷿䷘䷔䷅䷗䷉䷉䷺䷗
 console.log(taijiDecode('䷘䷵䷸䷖䷘䷮䷯䷌䷘䷮䷜䷿䷘䷔䷅䷗䷉䷉䷺䷗'))
-
-// output:
-// ䷜䷭䷾䷷䷹䷭䷠䷖䷾䷭䷣䷔䷮䷑䷳䷖䷂䷯䷘䷨䷹䷸䷂䷕䷏䷇☯☯
-// Hello Taiji Encode!
-// ䷘䷵䷸䷖䷘䷮䷯䷌䷘䷮䷜䷿䷘䷔䷅䷗䷉䷉䷺䷗
-// 你好太极！
+// 输出: 你好太极！
 ```
 
 ## TODO
