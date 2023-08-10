@@ -9,9 +9,9 @@
   "main": "taiji-encode.js",
   "repository": "https://github.com/Cat7373/taiji-encode",
   "keywords": [
-    "taiji"
+    "taiji", "encode", "decode"
   ],
-  "license": "LGPL-3.0-or-later",
+  "license": "MIT",
   "type": "module",
   "scripts": {
     "test": "node test.js",
