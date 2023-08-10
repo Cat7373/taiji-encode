@@ -1,14 +1,15 @@
 {
   "name": "taiji-encode",
-  "version": "1.0.0-dev.1",
+  "version": "1.0.0-dev.3",
   "author": "Cat73",
   "description": "A taiji encode util",
-  "main": "taiji.js",
+  "main": "taiji-encode.js",
   "repository": "https://github.com/Cat7373/taiji-encode",
   "keywords": [
     "taiji"
   ],
   "license": "LGPL-3.0-or-later",
+  "type": "module",
   "engines": {
     "node": ">= 14.0.0"
   }

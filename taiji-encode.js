@@ -1,7 +1,7 @@
 const guaChs = '䷁䷗䷆䷒䷎䷣䷭䷊䷏䷲䷧䷵䷽䷶䷟䷡䷇䷂䷜䷻䷦䷾䷯䷄䷬䷐䷮䷹䷞䷰䷛䷪䷖䷚䷃䷨䷳䷕䷑䷙䷢䷔䷿䷥䷷䷝䷱䷍䷓䷩䷺䷼䷴䷤䷸䷈䷋䷘䷅䷉䷠䷌䷫䷀☯'
 const base64Chs = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/='
 
-function taijiEncode(str) {
+export function taijiEncode(str) {
   let base64 = btoa(str)
   let taiji = base64
 
@@ -12,7 +12,7 @@ function taijiEncode(str) {
   return taiji
 }
 
-function taijiDecode(taiji) {
+export function taijiDecode(taiji) {
   let base64 = taiji
 
   for (let i = 0; i < 65; i++) {
@@ -22,8 +22,4 @@ function taijiDecode(taiji) {
   let data = atob(base64)
 
   return data
-}
-
-export default {
-  taijiEncode, taijiDecode
 }
