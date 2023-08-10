@@ -1,6 +1,9 @@
 {
   "name": "taiji-encode",
-  "version": "1.0.0-dev.3",
+  "version": "1.0.0",
+  "publishConfig": {
+    "tag": "latest"
+  },
   "author": "Cat73",
   "description": "A taiji encode util",
   "main": "taiji-encode.js",
