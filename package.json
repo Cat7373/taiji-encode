@@ -1,8 +1,8 @@
 {
   "name": "taiji-encode",
-  "version": "1.0.0",
+  "version": "1.0.1-dev.1",
   "publishConfig": {
-    "tag": "latest"
+    "tag": "experimental"
   },
   "author": "Cat73",
   "description": "A taiji encode util",
