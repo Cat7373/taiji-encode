@@ -1,6 +1,6 @@
 {
   "name": "taiji-encode",
-  "version": "1.0.1-dev.1",
+  "version": "1.0.2-dev.1",
   "publishConfig": {
     "tag": "experimental"
   },
@@ -13,7 +13,14 @@
   ],
   "license": "LGPL-3.0-or-later",
   "type": "module",
+  "scripts": {
+    "test": "node test.js",
+    "publish": "npm publish"
+  },
   "engines": {
     "node": ">= 14.0.0"
+  },
+  "dependencies": {
+    "js-base64": "^3.7.5"
   }
 }

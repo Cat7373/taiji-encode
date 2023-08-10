@@ -1,3 +1,5 @@
+import { encode, decode } from 'js-base64'
+
 /**
  * 六十四卦的每个字符，加代表 Base64 等于号的太极图
  */
@@ -13,7 +15,7 @@ const base64Chs = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz012345678
  * @returns 编码后的太极字符串
  */
 export function taijiEncode(str) {
-  let base64 = btoa(str)
+  let base64 = encode(str)
   let taiji = base64
 
   for (let i = 0; i < 65; i++) {
@@ -35,7 +37,7 @@ export function taijiDecode(taiji) {
     base64 = base64.replaceAll(guaChs[i], base64Chs[i])
   }
 
-  let data = atob(base64)
+  let data = decode(base64)
 
   return data
 }

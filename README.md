@@ -12,10 +12,14 @@ import { taijiEncode, taijiDecode } from 'taiji-encode'
 
 console.log(taijiEncode('Hello Taiji Encode!'))
 console.log(taijiDecode('䷜䷭䷾䷷䷹䷭䷠䷖䷾䷭䷣䷔䷮䷑䷳䷖䷂䷯䷘䷨䷹䷸䷂䷕䷏䷇☯☯'))
+console.log(taijiEncode('你好太极！'))
+console.log(taijiDecode('䷘䷵䷸䷖䷘䷮䷯䷌䷘䷮䷜䷿䷘䷔䷅䷗䷉䷉䷺䷗'))
 
 // output:
 // ䷜䷭䷾䷷䷹䷭䷠䷖䷾䷭䷣䷔䷮䷑䷳䷖䷂䷯䷘䷨䷹䷸䷂䷕䷏䷇☯☯
 // Hello Taiji Encode!
+// ䷘䷵䷸䷖䷘䷮䷯䷌䷘䷮䷜䷿䷘䷔䷅䷗䷉䷉䷺䷗
+// 你好太极！
 ```
 
 ## TODO
