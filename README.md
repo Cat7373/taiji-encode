@@ -6,11 +6,12 @@
 [![NPM bundle size][npm-bundle-size-image]][npm-bundle-size-url]
 [![NPM downloads][npm-download-image]][npm-download-url]
 
-## 使用 Taiji Encode
+## 安装
 ```sh
 npm install taiji-encode
 ```
 
+## 使用
 ```javascript
 import { taijiEncode, taijiDecode } from 'taiji-encode'
 
@@ -28,7 +29,6 @@ console.log(taijiDecode('䷘䷵䷸䷖䷘䷮䷯䷌䷘䷮䷜䷿䷘䷔䷅䷗䷉䷉�
 * 支持自定义字符排序规则，用于简单混淆
 
 ## License
-
 [MIT](LICENSE)
 
 [npm-image]: https://img.shields.io/npm/v/taiji-encode.svg?style=flat-square

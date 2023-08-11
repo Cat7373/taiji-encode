@@ -3,7 +3,7 @@ import { encode, decode } from 'js-base64'
 /**
  * 六十四卦的每个字符，加代表 Base64 等于号的太极图
  */
-const guaChs = '䷁䷗䷆䷒䷎䷣䷭䷊䷏䷲䷧䷵䷽䷶䷟䷡䷇䷂䷜䷻䷦䷾䷯䷄䷬䷐䷮䷹䷞䷰䷛䷪䷖䷚䷃䷨䷳䷕䷑䷙䷢䷔䷿䷥䷷䷝䷱䷍䷓䷩䷺䷼䷴䷤䷸䷈䷋䷘䷅䷉䷠䷌䷫䷀☯'
+const taijiChs = '䷁䷗䷆䷒䷎䷣䷭䷊䷏䷲䷧䷵䷽䷶䷟䷡䷇䷂䷜䷻䷦䷾䷯䷄䷬䷐䷮䷹䷞䷰䷛䷪䷖䷚䷃䷨䷳䷕䷑䷙䷢䷔䷿䷥䷷䷝䷱䷍䷓䷩䷺䷼䷴䷤䷸䷈䷋䷘䷅䷉䷠䷌䷫䷀☯'
 /**
  * Base64 的字符映射表
  */
@@ -19,7 +19,7 @@ export function taijiEncode(str) {
   let taiji = base64
 
   for (let i = 0; i < 65; i++) {
-    taiji = taiji.replaceAll(base64Chs[i], guaChs[i])
+    taiji = taiji.replaceAll(base64Chs[i], taijiChs[i])
   }
 
   return taiji
@@ -34,10 +34,23 @@ export function taijiDecode(taiji) {
   let base64 = taiji
 
   for (let i = 0; i < 65; i++) {
-    base64 = base64.replaceAll(guaChs[i], base64Chs[i])
+    base64 = base64.replaceAll(taijiChs[i], base64Chs[i])
   }
 
-  const data = decode(base64)
+  const str = decode(base64)
+  return str
+}
 
-  return data
+/**
+ * 验证一个字符串是否是一个有效的太极编码字符串
+ * @param {String} str 被验证的字符串
+ * @returns 验证结果
+ */
+export function isVaildTaiji(str) {
+  const len = str.length
+  for (let ch of str) {
+    if (!taijiChs.includes(ch)) return false
+  }
+
+  return true
 }
