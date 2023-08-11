@@ -23,6 +23,11 @@ console.log(taijiEncode('你好太极！'))
 // 输出: ䷘䷵䷸䷖䷘䷮䷯䷌䷘䷮䷜䷿䷘䷔䷅䷗䷉䷉䷺䷗
 console.log(taijiDecode('䷘䷵䷸䷖䷘䷮䷯䷌䷘䷮䷜䷿䷘䷔䷅䷗䷉䷉䷺䷗'))
 // 输出: 你好太极！
+
+console.log(isVaildTaiji('你好太极！'))
+// 输出: false
+console.log(isVaildTaiji('䷜䷭䷾䷷䷹䷭䷠䷖䷾䷭䷣䷔䷮䷑䷳䷖䷂䷯䷘䷨䷹䷸䷂䷕䷏䷇☯☯'))
+// 输出: true
 ```
 
 ## TODO
