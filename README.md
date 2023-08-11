@@ -13,7 +13,7 @@ npm install taiji-encode
 
 ## 使用
 ```javascript
-import { taijiEncode, taijiDecode } from 'taiji-encode'
+import { taijiEncode, taijiDecode, isVaildTaiji } from 'taiji-encode'
 
 console.log(taijiEncode('Hello Taiji Encode!'))
 // 输出: ䷜䷭䷾䷷䷹䷭䷠䷖䷾䷭䷣䷔䷮䷑䷳䷖䷂䷯䷘䷨䷹䷸䷂䷕䷏䷇☯☯
