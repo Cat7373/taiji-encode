@@ -1,6 +1,6 @@
 {
   "name": "taiji-encode",
-  "version": "1.0.2-dev.1",
+  "version": "1.0.3-dev.1",
   "publishConfig": {
     "tag": "experimental"
   },
@@ -14,8 +14,7 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "test": "node test.js",
-    "publish": "npm publish"
+    "test": "node test.js"
   },
   "engines": {
     "node": ">= 14.0.0"
