@@ -6,6 +6,9 @@
 [![NPM bundle size][npm-bundle-size-image]][npm-bundle-size-url]
 [![NPM downloads][npm-download-image]][npm-download-url]
 
+## Demos
+* [taichi.wallleap.cn](https://taichi.wallleap.cn)
+
 ## 安装
 ```sh
 npm install taiji-encode
