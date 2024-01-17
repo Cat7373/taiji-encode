@@ -4,12 +4,16 @@
 
   //- 明文内容
   fieldset.mt-2.border.rounded-md.p-2
-    legend.px-2 明文内容
+    legend.px-2
+      span 明文内容
+      span.ml-2.text-sky-500.text-sm(@click="doCopy(content)") 复制
     van-field.rounded-lg(v-model="content", rows="5", autosize, type="textarea", placeholder="Hello Taiji Encode!", @update:model-value="encode")
 
   //- 编码内容
   fieldset.mt-2.border.rounded-md.p-2
-    legend.px-2 太极内容
+    legend.px-2
+      span 太极内容
+      span.ml-2.text-sky-500.text-sm(@click="doCopy(taijiContent)") 复制
     van-field.rounded-lg(v-model="taijiContent", rows="5", autosize, type="textarea", placeholder="䷜䷭䷾䷷䷹䷭䷠䷖䷾䷭䷣䷔䷮䷑䷳䷖䷂䷯䷘䷨䷹䷸䷂䷕䷏䷇☯☯", @update:model-value="decode", :error-message="taijiErrMsg")
 
   //- 设置区
@@ -31,7 +35,9 @@
 
 <script setup>
 import { ref } from 'vue'
+import { showNotify } from 'vant'
 import { taijiEncode, taijiDecode, isVaildTaiji } from 'taiji-encode'
+import Clipboard from 'clipboard'
 
 // 明文输入框内容
 const content = ref('')
@@ -61,5 +67,11 @@ const decode = () => {
 
   content.value = ''
   content.value = taijiDecode(taijiContent.value, { pwd: pwd.value })
+}
+
+// 复制内容
+const doCopy = str => {
+  Clipboard.copy(str)
+  showNotify({ type: 'success', message: '复制成功' })
 }
 </script>
