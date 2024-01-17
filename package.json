@@ -1,22 +1,22 @@
 {
   "name": "taiji-encode",
   "version": "1.0.3-dev.1",
-  "publishConfig": {
-    "tag": "experimental"
-  },
-  "author": "Cat73",
   "description": "A taiji encoder",
-  "main": "src/index.js",
+  "author": "Cat73",
+  "license": "MIT",
   "repository": "https://github.com/Cat7373/taiji-encode",
   "bugs": {
     "url": "https://github.com/Cat7373/taiji-encode/issues"
   },
   "homepage": "https://github.com/Cat7373/taiji-encode#readme",
+  "main": "src/index.js",
+  "type": "module",
+  "publishConfig": {
+    "tag": "experimental"
+  },
   "keywords": [
     "taiji", "encoder", "decoder"
   ],
-  "license": "MIT",
-  "type": "module",
   "scripts": {
     "demo": "node demo.js"
   },

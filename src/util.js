@@ -1,4 +1,4 @@
-import { base64Chs, taijiChs } from './mapping.js'
+import { taijiChs } from './mapping.js'
 
 /**
  * 验证一个字符串是否是一个有效的太极编码字符串
@@ -38,7 +38,7 @@ export function convMapping(key) {
 
   // 初始化置换表
   const S = []
-  for (let i = 0; i < 64; i++) { // = 部分永远映射为 ☯，不做替换处理
+  for (let i = 0; i < 64; i++) {
     S.push(i)
   }
 
@@ -55,6 +55,7 @@ export function convMapping(key) {
   let i = 0
   j = 0
   return idx => {
+    // = 部分永远映射为 ☯，不做替换处理
     if (idx == 64) return 64
 
     i = (i + 1) % 64
