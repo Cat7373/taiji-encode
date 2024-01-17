@@ -6,7 +6,8 @@ import { taijiChs } from './mapping.js'
  * @returns 验证结果
  */
 export function isVaildTaiji(str) {
-  const len = str.length
+  if (!str) return false
+
   for (const ch of str) {
     if (!taijiChs.includes(ch)) return false
   }

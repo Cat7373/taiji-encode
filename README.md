@@ -6,7 +6,8 @@
 [![NPM bundle size][npm-bundle-size-image]][npm-bundle-size-url]
 [![NPM downloads][npm-download-image]][npm-download-url]
 
-## Demos
+## 在线 Demo
+* [Github Pages](https://cat7373.github.io/taiji-encode)
 * [taichi.wallleap.cn](https://taichi.wallleap.cn)
 
 ## 安装
