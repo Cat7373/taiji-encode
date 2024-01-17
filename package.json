@@ -1,6 +1,6 @@
 {
   "name": "taiji-encode",
-  "version": "1.0.3-dev.1",
+  "version": "1.0.3",
   "description": "A taiji encoder",
   "author": "Cat73",
   "license": "MIT",
@@ -12,7 +12,7 @@
   "main": "src/index.js",
   "type": "module",
   "publishConfig": {
-    "tag": "experimental"
+    "tag": "latest"
   },
   "keywords": [
     "taiji", "encoder", "decoder"
