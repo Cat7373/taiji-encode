@@ -5,11 +5,15 @@
     "tag": "experimental"
   },
   "author": "Cat73",
-  "description": "A taiji encode util",
-  "main": "taiji-encode.js",
+  "description": "A taiji encoder",
+  "main": "src/index.js",
   "repository": "https://github.com/Cat7373/taiji-encode",
+  "bugs": {
+    "url": "https://github.com/Cat7373/taiji-encode/issues"
+  },
+  "homepage": "https://github.com/Cat7373/taiji-encode#readme",
   "keywords": [
-    "taiji", "encode", "decode"
+    "taiji", "encoder", "decoder"
   ],
   "license": "MIT",
   "type": "module",
