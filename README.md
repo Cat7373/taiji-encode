@@ -18,23 +18,40 @@ npm install taiji-encode
 ```javascript
 import { taijiEncode, taijiDecode, isVaildTaiji } from 'taiji-encode'
 
+// 普通编码:
 console.log(taijiEncode('Hello Taiji Encode!'))
-// 输出: ䷜䷭䷾䷷䷹䷭䷠䷖䷾䷭䷣䷔䷮䷑䷳䷖䷂䷯䷘䷨䷹䷸䷂䷕䷏䷇☯☯
+// ䷜䷭䷾䷷䷹䷭䷠䷖䷾䷭䷣䷔䷮䷑䷳䷖䷂䷯䷘䷨䷹䷸䷂䷕䷏䷇☯☯
 console.log(taijiDecode('䷜䷭䷾䷷䷹䷭䷠䷖䷾䷭䷣䷔䷮䷑䷳䷖䷂䷯䷘䷨䷹䷸䷂䷕䷏䷇☯☯'))
-// 输出: Hello Taiji Encode!
+// Hello Taiji Encode!
 console.log(taijiEncode('你好太极！'))
-// 输出: ䷘䷵䷸䷖䷘䷮䷯䷌䷘䷮䷜䷿䷘䷔䷅䷗䷉䷉䷺䷗
+// ䷘䷵䷸䷖䷘䷮䷯䷌䷘䷮䷜䷿䷘䷔䷅䷗䷉䷉䷺䷗
 console.log(taijiDecode('䷘䷵䷸䷖䷘䷮䷯䷌䷘䷮䷜䷿䷘䷔䷅䷗䷉䷉䷺䷗'))
-// 输出: 你好太极！
+// 你好太极！
 
+// 验证是否为太极编码:
 console.log(isVaildTaiji('你好太极！'))
-// 输出: false
+// false
 console.log(isVaildTaiji('䷜䷭䷾䷷䷹䷭䷠䷖䷾䷭䷣䷔䷮䷑䷳䷖䷂䷯䷘䷨䷹䷸䷂䷕䷏䷇☯☯'))
-// 输出: true
-```
+// true
+console.log(isVaildTaiji('Hello ䷜䷭䷾䷷䷹䷭䷠䷖䷾䷭䷣䷔䷮䷑䷳䷖䷂䷯䷘䷨䷹䷸䷂䷕䷏䷇☯☯'))
+// false
 
-## TODO
-* 支持自定义字符排序规则，用于简单混淆
+// 直接编解码 Base64:
+console.log(taijiEncode('SGVsbG8gVGFpamkgRW5jb2RlIQ==', { base64: true }))
+// ䷜䷭䷾䷷䷹䷭䷠䷖䷾䷭䷣䷔䷮䷑䷳䷖䷂䷯䷘䷨䷹䷸䷂䷕䷏䷇☯☯
+console.log(taijiDecode('䷜䷭䷾䷷䷹䷭䷠䷖䷾䷭䷣䷔䷮䷑䷳䷖䷂䷯䷘䷨䷹䷸䷂䷕䷏䷇☯☯', { base64: true }))
+// SGVsbG8gVGFpamkgRW5jb2RlIQ==
+
+// 简单加解密:
+console.log(taijiEncode('Hello Taiji Encode!', { pwd: 'Hello Taiji!' }))
+// ䷗䷪䷏䷦䷛䷯䷌䷠䷵䷌䷑䷯䷘䷳䷖䷴䷘䷘䷗䷽䷷䷢䷩䷮䷺䷃☯☯
+console.log(taijiDecode('䷗䷪䷏䷦䷛䷯䷌䷠䷵䷌䷑䷯䷘䷳䷖䷴䷘䷘䷗䷽䷷䷢䷩䷮䷺䷃☯☯'))
+// �yo|/ٖ�H4�L��Z�
+console.log(taijiDecode('䷗䷪䷏䷦䷛䷯䷌䷠䷵䷌䷑䷯䷘䷳䷖䷴䷘䷘䷗䷽䷷䷢䷩䷮䷺䷃☯☯', { pwd: 'abcdef' }))
+// c3�G��pxUC��
+console.log(taijiDecode('䷗䷪䷏䷦䷛䷯䷌䷠䷵䷌䷑䷯䷘䷳䷖䷴䷘䷘䷗䷽䷷䷢䷩䷮䷺䷃☯☯', { pwd: 'Hello Taiji!' }))
+// Hello Taiji Encode!
+```
 
 ## License
 [MIT](LICENSE)

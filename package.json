@@ -18,7 +18,7 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "test": "node test.js"
+    "demo": "node demo.js"
   },
   "engines": {
     "node": ">= 14.0.0"
