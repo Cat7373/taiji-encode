@@ -35,4 +35,5 @@ export default {
     // 服务端目前不支持此压缩方式
     brotliSize: false
   },
+  base: '/taiji-encode',
 }
