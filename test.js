@@ -1,4 +1,4 @@
-import { taijiEncode, taijiDecode, isVaildTaiji } from './taiji-encode.js'
+import { taijiEncode, taijiDecode, isVaildTaiji } from './src/index.js'
 
 console.log(taijiEncode('Hello Taiji Encode!'))
 console.log(taijiDecode('䷜䷭䷾䷷䷹䷭䷠䷖䷾䷭䷣䷔䷮䷑䷳䷖䷂䷯䷘䷨䷹䷸䷂䷕䷏䷇☯☯'))
