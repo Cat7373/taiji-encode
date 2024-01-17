@@ -28,6 +28,7 @@ function swap(arr, a, b) {
 
 /**
  * 基于密码生成置换函数
+ * 算法参考自 RC4
  * @param {String} key 密码，注意，超出 64 位的部分将被静默忽略
  * @returns 置换函数
  */
